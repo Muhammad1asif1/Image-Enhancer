@@ -1,0 +1,5 @@
+{
+  "name": "AI Passport Photo Editor",
+  "description": "An AI-powered tool to transform your photos into official passport pictures. This app adjusts the background to white and changes your attire to formal wear, offering a variety of clothing options for both men and women.",
+  "requestFramePermissions": []
+}
