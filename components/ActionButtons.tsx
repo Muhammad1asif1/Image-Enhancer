@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface ActionButtonsProps {
@@ -36,11 +35,11 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ isProcessing, isPr
     };
     
     return (
-        <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8 text-center">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 mb-6 sm:mb-8 text-center">
             <button
                 onClick={onProcess}
                 disabled={isProcessDisabled || isProcessing}
-                className="w-full md:w-auto text-xl font-bold bg-red-600 text-white py-4 px-10 rounded-lg shadow-md hover:bg-red-700 disabled:bg-red-300 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3 mx-auto"
+                className="w-full md:w-auto text-lg sm:text-xl font-bold bg-red-600 text-white py-3 px-6 sm:py-4 sm:px-10 rounded-lg shadow-md hover:bg-red-700 disabled:bg-red-300 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3 mx-auto"
             >
                 {isProcessing ? (
                     <>
@@ -55,12 +54,12 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ isProcessing, isPr
                 )}
             </button>
 
-            {error && <p className="text-red-600 mt-4 text-center text-lg">{error}</p>}
+            {error && <p className="text-red-600 mt-4 text-center text-base sm:text-lg">{error}</p>}
 
             {generatedImage && !isProcessing && (
                  <button
                     onClick={handleDownload}
-                    className="w-full md:w-auto text-xl mt-6 font-bold bg-blue-600 text-white py-4 px-10 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3 mx-auto"
+                    className="w-full md:w-auto text-lg sm:text-xl mt-4 sm:mt-6 font-bold bg-blue-600 text-white py-3 px-6 sm:py-4 sm:px-10 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3 mx-auto"
                 >
                     <DownloadIcon />
                     تصویر ڈاؤن لوڈ کریں

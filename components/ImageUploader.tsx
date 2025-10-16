@@ -1,4 +1,3 @@
-
 import React, { useCallback, useState } from 'react';
 
 interface ImageUploaderProps {
@@ -61,13 +60,13 @@ export const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageUpload }) =
                 onDragLeave={(e) => handleDragEvent(e, false)}
                 onDragOver={(e) => handleDragEvent(e, true)}
                 onDrop={handleDrop}
-                className={`border-2 dashed rounded-lg p-8 text-center cursor-pointer transition-all duration-300 ${isDragging ? 'border-blue-500 bg-blue-50' : 'border-gray-300 hover:border-blue-400 hover:bg-gray-50'}`}
+                className={`border-2 dashed rounded-lg p-6 sm:p-8 text-center cursor-pointer transition-all duration-300 ${isDragging ? 'border-blue-500 bg-blue-50' : 'border-gray-300 hover:border-blue-400 hover:bg-gray-50'}`}
             >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-12 h-12 mx-auto text-gray-400 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 sm:w-12 sm:h-12 mx-auto text-gray-400 mb-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
                 </svg>
-                <p className="text-lg text-gray-700 font-semibold">تصویر اپ لوڈ کرنے کے لیے یہاں کلک کریں یا ڈریگ کریں</p>
-                <p className="text-sm text-gray-500 mt-1">(چہرے اور لباس کی تبدیلی AI ماڈل کی پابندیوں کی وجہ سے محدود ہو سکتی ہے)</p>
+                <p className="text-base sm:text-lg text-gray-700 font-semibold">تصویر اپ لوڈ کرنے کے لیے یہاں کلک کریں یا ڈریگ کریں</p>
+                <p className="text-xs sm:text-sm text-gray-500 mt-1">(چہرے اور لباس کی تبدیلی AI ماڈل کی پابندیوں کی وجہ سے محدود ہو سکتی ہے)</p>
             </div>
         </>
     );

@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from 'react';
 import { Header } from './components/Header';
 import { ImageUploader } from './components/ImageUploader';
@@ -58,12 +57,12 @@ const App: React.FC = () => {
     }, [originalImage, selectedClothing]);
 
     return (
-        <div className="container mx-auto max-w-4xl p-4 sm:p-6 lg:p-8 min-h-screen">
+        <div className="container mx-auto max-w-4xl p-4 min-h-screen">
             <Header />
 
             <main>
-                <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
-                    <h2 className="text-3xl font-bold text-gray-800 mb-6 border-b pb-4 border-gray-200">مرحلہ 1: تصویر اور لباس منتخب کریں</h2>
+                <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 mb-6 sm:mb-8">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 border-b pb-4 border-gray-200">مرحلہ 1: تصویر اور لباس منتخب کریں</h2>
                     <ImageUploader onImageUpload={handleImageUpload} />
                     {originalImage && (
                          <ClothingSelector
